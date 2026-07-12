@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 # Create your views here.
 
@@ -12,3 +12,8 @@ def listaLibros(request):
         {'libros':libros})
 
 
+def detale_libro(request,id):
+    libro = get_object_or_404(Libros,id=id)
+
+    return render(request, 'catalogo/detalle_libro.html',
+                {'libro':libro})

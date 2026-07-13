@@ -1,4 +1,4 @@
-{% extends 'catalogo/base.html' %}
+{% extends "catalogo/base.html" %}
 {% load static %}
 
 {% block title %} Catálogo de Libros {% endblock %}
@@ -8,7 +8,7 @@
 <section id="catalogo">
     <h2>Libros disponibles</h2>
     <div class="grid-libros">
-        {% for libro in libros %}
+        {% for libro in librosttt %}
 
         <article class="libro-card">
             {% if libro.imagen %}
@@ -18,7 +18,7 @@
             {% endif %}
 
             <h3>{{ libro.nombreLibro }}</h3>
-            <p>{{ libro.autor.nombre }}</p>
+            <p>{{ libro.autor.nombre }} {{ libro.autor.apellido }}</p>
             <span>$ {{ libro.precio }} </span>
 
             <div class="acciones">

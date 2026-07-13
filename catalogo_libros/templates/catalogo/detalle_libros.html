@@ -14,12 +14,12 @@
         {% endif %}
 
         <div class="info-libro">
-            <h1>{{ libro.nombreLibro }}</h1>
+            <h2>{{ libro.nombreLibro }}</h2>
 
             <p><strong>Autor:</strong> {{ libro.autor.nombre }}  {{ libro.autor.apellido }}</p>
-            <p><strong>Precio:</strong> {{ libro.precio }}</p>
+            <p><strong>Precio:</strong>$ {{ libro.precio }}</p>
 
-            <a href="{% url 'lista_libros' %}">
+            <a href="{% url 'libros' %}" class="btn-volver">
                 Volver al catátologo
             </a>
 

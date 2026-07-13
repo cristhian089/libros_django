@@ -1,11 +1,33 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <title>{% block title %} Catálogo de Libros {% endblock %}</title>
+</head>
+<body>
+    
+    <header class="header">
+        <h1 style="text-align: center;font-size: 30px;">La Casa del Libro</h1>
+        <nav>
+            
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
 {% block content %}
 
 <section id="catalogo">
     <h2>Libros disponibles</h2>
 
     <div class="grid-libros">
-        {% for libros in libros %}
+        {% for libro in libros %}
             <article class="libro-card">
 
                 {% if libro.imagen %}
@@ -30,14 +52,16 @@
             </article>
 
             {% empty %}
-        
+            <p>No hay libros disponbles.</p>
 
         {% endfor %}
 
     </div>
-
-
-
 </section>
-
 {% endblock %}
+
+    <footer>
+        <p>&copy; 2026 Mi Sitio Web</p>
+    </footer>
+</body>
+</html>

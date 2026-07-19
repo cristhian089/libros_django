@@ -4,20 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    
+
+    
     <title>{% block title %} Catálogo de Libros {% endblock %}</title>
 </head>
 <body>
     
     <header class="header">
-        <h1 style="text-align: center;font-size: 30px;">La Casa del Libro</h1>
-        <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+                </div>
+                <div class="col">
+                    <h1 class="site-title">La Casa del Libro</h1>
+                </div>
+                <div class="col">
+                
+                </div>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-8 d-flex justify-content-center">
+                
             
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+                    <div class="p-2 header-bottom"><a href="#">Inicio</a></div>
+                    <div class="p-2 header-bottom"><a href="#">Historia</a></div>
+                    <div class="p-2 header-bottom"><a href="#">Actividades</a></div>
+                    <div class="p-2 header-bottom "><a href="#">Categorias</a></div>
+                  
+        </div>
+            <div class="col-4 d-flex justify-content-evenly">
+                <div>
+                    <a href="#" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                        </svg> 
+                        Mi carrito 
+                    </a>
+                </div>
+                <div><a href="#">Facebook </a></div>
+                <div><a href="#">Instagram </a></div>
+                <div><a href="#">Twitter </a></div>
+            </div>
+        </div>
+        
+        
     </header>
 
 
@@ -60,8 +97,10 @@
 </section>
 {% endblock %}
 
-    <footer>
-        <p>&copy; 2026 Mi Sitio Web</p>
+    <footer class="style-foot">
+        <p class="style-foot">&copy; 2026 La Casa del Libro - Todos los derechos reservados.</p>
     </footer>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 </body>
 </html>

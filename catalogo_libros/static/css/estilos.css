@@ -7,6 +7,7 @@
     --verde-menu:#b6ff00;
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -43,6 +44,12 @@ header {
     width: auto;
 }
 
+.style-foot {
+    background: var(--negro);
+    text-align: center;
+    color: white;
+} 
+
 /* TITULO CENTRADO REAL */
 .site-title {
     text-align: center;
@@ -65,6 +72,7 @@ header {
     grid-template-columns: 1fr auto;
     align-items: center;
     margin-top: 0.8rem;
+    border-color: var(--verde-menu);
 }
 
 /* MENU */
@@ -96,4 +104,6 @@ header {
 }
 
 /* MAIN */
+
+
 

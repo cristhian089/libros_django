@@ -14,5 +14,5 @@ def listaLibros(request):
 
 def detale_libro(request,id):
     libro = get_object_or_404(Libros,id=id)
-    return render(request, 'catalogo/detalle_libro.html',
+    return render(request, 'catalogo/detalle_libros.html',
                 {'libro':libro})

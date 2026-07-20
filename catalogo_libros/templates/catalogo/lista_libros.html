@@ -12,9 +12,49 @@
 
        
             
-            <div class="card h-25 " >
+            <div class="card h-25" >
                 {% if libro.nombreLibro == "Cien años de soledad" %}
                 <img class="portadaimg" src="{% static 'img/cien_soledad.png' %}" alt="">
+
+                {% elif libro.nombreLibro == "La ciudad y los perros" %}
+                <img class="portadaimg" src="{% static 'img/ciudad_perros.png' %}" alt="">
+                {% elif libro.nombreLibro == "Rayuela" %}
+                <img class="portadaimg" src="{% static 'img/rayuela.png' %}" alt="">
+                {% elif libro.nombreLibro == "La casa de los espiritus" %}
+                <img class="portadaimg" src="{% static 'img/la_casa_espiritus.png' %}" alt="">
+                {% elif libro.nombreLibro == "Ficciones" %}
+                <img class="portadaimg" src="{% static 'img/ficciones.png' %}" alt="">
+                {% elif libro.nombreLibro == "Aura" %}
+                <img class="portadaimg" src="{% static 'img/aura.png' %}" alt="">
+                {% elif libro.nombreLibro == "Pedro Páramo" %}
+                <img class="portadaimg" src="{% static 'img/pedro_paramo.png' %}" alt="">
+                {% elif libro.nombreLibro == "Veinte poemas de amor" %}
+                <img class="portadaimg" src="{% static 'img/poemas_amor.png' %}" alt="">
+                {% elif libro.nombreLibro == "Como agua para chocolate" %}
+                <img class="portadaimg" src="{% static 'img/agua_chocolate.png' %}" alt="">
+                {% elif libro.nombreLibro == "El laberinto de la soledad" %}
+                <img class="portadaimg" src="{% static 'img/laberinto_soledad.png' %}" alt="">
+                {% elif libro.nombreLibro == "El otoño del patriarca" %}
+                <img class="portadaimg" src="{% static 'img/oto_patriarca.png' %}" alt="">
+                {% elif libro.nombreLibro == "Corversación en La Catedral" %}
+                <img class="portadaimg" src="{% static 'img/conversacion_catedral.png' %}" alt="">
+                {% elif libro.nombreLibro == "Bestiario" %}
+                <img class="portadaimg" src="{% static 'img/bestiario.png' %}" alt="">
+                {% elif libro.nombreLibro == "Paula" %}
+                <img class="portadaimg" src="{% static 'img/paula_isabel_allende.png' %}" alt="">
+                {% elif libro.nombreLibro == "El Aleph" %}
+                <img class="portadaimg" src="{% static 'img/el_aleph.png' %}" alt="">
+                {% elif libro.nombreLibro == "La muerte de Artemio Cruz" %}
+                <img class="portadaimg" src="{% static 'img/muerte_artemio_cruz.png' %}" alt="">
+                {% elif libro.nombreLibro == "El llano en llamas" %}
+                <img class="portadaimg" src="{% static 'img/llano_llamas.png' %}" alt="">
+                {% elif libro.nombreLibro == "Residencia en la tierra" %}
+                <img class="portadaimg" src="{% static 'img/residencia_tierra.png' %}" alt="">
+                {% elif libro.nombreLibro == "Malinche" %}
+                <img class="portadaimg" src="{% static 'img/malinche.png' %}" alt="">
+                {% elif libro.nombreLibro == "Piedra del sol" %}
+                <img class="portadaimg" src="{% static 'img/piedra_sol.png' %}" alt="">
+
                 {% else %}
                     <img class="portadaimg" src="{% static 'img/logo.jpg' %}" alt="Sin portada">
                 {% endif %}

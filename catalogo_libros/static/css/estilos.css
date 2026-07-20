@@ -1,3 +1,5 @@
+
+
 :root {
     --negro: #121212;
     --beige: #E6D5B8;
@@ -6,13 +8,19 @@
     --acento:#8C6A4A;
     --verde-menu:#b6ff00;
 }
-
+.site-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blanco);
+    line-height: 1;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 body{
     font-family: 'Segoe UI', system-ui, -apple-system,sans-serif;
@@ -20,12 +28,7 @@ body{
     color:var(--negro);
     line-height: 1.6;
 
-}
-
-
-/*
-    HEADER
-*/
+} 
 
 header {
     background: var(--negro);
@@ -44,22 +47,18 @@ header {
     width: auto;
 }
 
-.style-foot {
-    background: var(--negro);
-    text-align: center;
-    color: white;
+.portadaimg{
+    height: 300px;
+    width:250px;
 } 
 
-/* TITULO CENTRADO REAL */
-.site-title {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--blanco);
-    line-height: 1;
-}
+.style-foot {
+    background: var(--negro);
+    color: white;
+    height: 50px;
+} 
 
-/* CARRITO */
+
 .carrito {
     color: var(--blanco);
     text-decoration: none;
@@ -75,7 +74,6 @@ header {
     border-color: var(--verde-menu);
 }
 
-/* MENU */
 .main-nav a {
     color:var(--blanco);
     text-decoration:none;
@@ -91,7 +89,6 @@ header {
     color:#000;
 }
 
-/* redes */
 .social{
     display: flex;
     gap: 1rem;
@@ -101,9 +98,5 @@ header {
     color: var(--beige);
     text-decoration: none;
     font-size: 0.9rem;
-}
-
-/* MAIN */
-
-
+}  
 

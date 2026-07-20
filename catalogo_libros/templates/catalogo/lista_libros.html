@@ -5,32 +5,31 @@
 
 {% block content %}
 
-<section id="catalogo">
-    <h2>Libros disponibles</h2>
-    <div class="grid-libros">
-        {% for libro in librosttt %}
+<section id="catalogo" class="mw-100 mh-100">
+    <h2 class="text-center mt-2 mb-2">Libros disponibles</h2>
+    <div class="d-flex justify-content-center flex-wrap " >
+        {% for libro in libros %}
 
-        <article class="libro-card">
-            {% if libro.imagen %}
-                <img src="{{ libro.imagen.url }}" alt="{{ libro.nombreLibro }}">
-            {% else %}
-                <img src="{% static 'img/default.jpg' %}" alt="Sin portada">
-            {% endif %}
-
-            <h3>{{ libro.nombreLibro }}</h3>
-            <p>{{ libro.autor.nombre }} {{ libro.autor.apellido }}</p>
-            <span>$ {{ libro.precio }} </span>
-
-            <div class="acciones">
-                <a href="{% url 'detalle_libro' libro.id %}" class="btn-detalle" >
-                    Ver detalle
-                </a>
-                <button class="btn-carrito">
-                    Añadir al carrito
-                </button>
+       
+            
+            <div class="card h-25 " >
+                {% if libro.nombreLibro == "Cien años de soledad" %}
+                <img class="portadaimg" src="{% static 'img/cien_soledad.png' %}" alt="">
+                {% else %}
+                    <img class="portadaimg" src="{% static 'img/logo.jpg' %}" alt="Sin portada">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ libro.nombreLibro }}</h5>
+                    <p class="card-text">{{ libro.autor.nombre }} {{ libro.autor.apellido }}</p>
+                    <p>$ {{ libro.precio }} </p>
+                    <a  href="{% url 'detalle_libro' libro.id %}" class="btn btn-primary">Ver detalle</a>
+                    <button  type="button" class="btn btn-primary">
+                        Añadir al carrito
+                    </button>
+                </div>
             </div>
 
-        </article>
+        
         {% empty %}
             <p>No hay libros disponibles.</p>
         {% endfor %}

@@ -5,58 +5,70 @@
 
 {% block content %}
 
-<section id="detalle-libro">
-    <article class="libro-detalle">
+<section id="detalle-libro" class="d-flex justify-content-center ">
+    <article class="libro-detalle w-75 ">
+        <div class="row mw-100 mh-100" >
+            {% if libro.nombreLibro == "Cien años de soledad" %}
+                <img class="portadaimg col-4" src="{% static 'img/cien_soledad.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "La ciudad y los perros" %}
+                <img class="portadaimg col-4" src="{% static 'img/ciudad_perros.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Rayuela" %}
+                <img src="{% static 'img/rayuela.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "La casa de los espiritus" %}
+                <img src="{% static 'img/la_casa_espiritus.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Ficciones" %}
+                <img src="{% static 'img/ficciones.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Aura" %}
+                <img src="{% static 'img/aura.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Pedro Páramo" %}
+                <img src="{% static 'img/pedro_paramo.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Veinte poemas de amor" %}
+                <img src="{% static 'img/poemas_amor.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Como agua para chocolate" %}
+                <img src="{% static 'img/agua_chocolate.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "El laberinto de la soledad" %}
+                <img src="{% static 'img/laberinto_soledad.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "El otoño del patriarca" %}
+                <img src="{% static 'img/oto_patriarca.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Corversación en La Catedral" %}
+                <img src="{% static 'img/conversacion_catedral.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Bestiario" %}
+                <img src="{% static 'img/bestiario.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Paula" %}
+                <img src="{% static 'img/paula_isabel_allende.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "El Aleph" %}
+                <img src="{% static 'img/el_aleph.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "La muerte de Artemio Cruz" %}
+                <img src="{% static 'img/muerte_artemio_cruz.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "El llano en llamas" %}
+                <img src="{% static 'img/llano_llamas.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Residencia en la tierra" %}
+                <img src="{% static 'img/residencia_tierra.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Malinche" %}
+                <img src="{% static 'img/malinche.png' %}" alt="{{ libro.nombreLibro }}">
+            {% elif libro.nombreLibro == "Piedra del sol" %}
+                <img src="{% static 'img/piedra_sol.png' %}" alt="{{ libro.nombreLibro }}">
+            {% else %}
+                <img class="portadaimg" src="{% static 'img/default.jpg' %}" alt="Sin portada">
+            {% endif %}
+            <div class="col-8 d-flex align-content-end">
+                <div class="" >
+                    <h2 >{{ libro.nombreLibro }}</h2>
+                    <p ><strong>Autor:</strong> {{ libro.autor.nombre }}  {{ libro.autor.apellido }}</p>
+                    <p ><strong>Precio:</strong>$ {{ libro.precio }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-libro mt-4">
+            
+            
+            <div class="border-top border-bottom border-info" >
+                <span class="fw-bold"" >Sinopsis</span>
+                <p>
+                    {{ libro.sinopsis }}
+                </p>
+            </div>
 
-        {% if libro.nombreLibro == "Cien años de soledad" %}
-            <img class="portadaimg" src="{% static 'img/cien_soledad.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "La ciudad y los perros" %}
-            <img src="{% static 'img/ciudad_perros.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Rayuela" %}
-            <img src="{% static 'img/rayuela.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "La casa de los espiritus" %}
-            <img src="{% static 'img/la_casa_espiritus.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Ficciones" %}
-            <img src="{% static 'img/ficciones.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Aura" %}
-            <img src="{% static 'img/aura.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Pedro Páramo" %}
-            <img src="{% static 'img/pedro_paramo.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Veinte poemas de amor" %}
-            <img src="{% static 'img/poemas_amor.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Como agua para chocolate" %}
-            <img src="{% static 'img/agua_chocolate.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "El laberinto de la soledad" %}
-            <img src="{% static 'img/laberinto_soledad.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "El otoño del patriarca" %}
-            <img src="{% static 'img/oto_patriarca.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Corversación en La Catedral" %}
-            <img src="{% static 'img/conversacion_catedral.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Bestiario" %}
-            <img src="{% static 'img/bestiario.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Paula" %}
-            <img src="{% static 'img/paula_isabel_allende.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "El Aleph" %}
-            <img src="{% static 'img/el_aleph.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "La muerte de Artemio Cruz" %}
-            <img src="{% static 'img/muerte_artemio_cruz.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "El llano en llamas" %}
-            <img src="{% static 'img/llano_llamas.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Residencia en la tierra" %}
-            <img src="{% static 'img/residencia_tierra.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Malinche" %}
-            <img src="{% static 'img/malinche.png' %}" alt="{{ libro.nombreLibro }}">
-        {% elif libro.nombreLibro == "Piedra del sol" %}
-            <img src="{% static 'img/piedra_sol.png' %}" alt="{{ libro.nombreLibro }}">
-        {% else %}
-            <img class="portadaimg" src="{% static 'img/default.jpg' %}" alt="Sin portada">
-        {% endif %}
-
-        <div class="info-libro">
-            <h2>{{ libro.nombreLibro }}</h2>
-
-            <p><strong>Autor:</strong> {{ libro.autor.nombre }}  {{ libro.autor.apellido }}</p>
-            <p><strong>Precio:</strong>$ {{ libro.precio }}</p>
 
             <a href="{% url 'libros' %}" class="btn-volver">
                 Volver al catátologo
